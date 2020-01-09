@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </ul>
 
        <ul class="nav navbar-nav navbar-right">
-       <li><a href="login/logout">Sair</a></li>
+       <li><a href="http://localhost/Atividade/login">Sair</a></li>
       </ul>
 
      </div>
@@ -72,7 +72,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <thead>
         <tr>
         <th>Código</th>
-        <th>Codigo do Cliente</th>
 				<th>Data da Venda</th>
 				<th>Valor Total</th>
 				<th>Valor Pago</th>
@@ -87,8 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         foreach ($vendas as $vendas)
         {        
           echo '<tr>';
-          echo '<td>'.$vendas->codigo.'</td>'; 
-          echo '<td>'.$vendas->codigoCliente.'</td>'; 
+          echo '<td>'.$vendas->codigo.'</td>';  
           echo '<td>'.$vendas->dataVenda.'</td>';
           echo '<td>'.$vendas->valorTotal.'</td>';
           echo '<td>'.$vendas->valorPago.'</td>'; 

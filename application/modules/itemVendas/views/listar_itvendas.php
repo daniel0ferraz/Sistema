@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </ul>
 
        <ul class="nav navbar-nav navbar-right">
-       <li><a href="login/logout">Sair</a></li>
+       <li><a href="http://localhost/Atividade/login">Sair</a></li>
       </ul>
 
      </div>
@@ -81,20 +81,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <tbody>
         <?php
         
-        foreach ($itemvendas as $itemvendas)
+        foreach ($itemvendas as $itemvenda)
         {        
           echo '<tr>';
-          echo '<td>'.$itemvendas->codigo.'</td>'; 
-          echo '<td>'.$itemvendas->codigoProduto.'</td>'; 
-          echo '<td>'.$itemvendas->quantidade.'</td>';
-          echo '<td>'.$itemvendas->val_venda.'</td>';
-          echo '<td>'.$itemvendas->val_compra.'</td>';
-          echo '<td>'.$itemvendas->vendas_codigo.'</td>';
+          echo '<td>'.$itemvenda->codigo.'</td>'; 
+          echo '<td>'.$itemvenda->codigoProduto.'</td>'; 
+          echo '<td>'.$itemvenda->quantidade.'</td>';
+          echo '<td>'.$itemvenda->val_venda.'</td>';
+          echo '<td>'.$itemvenda->val_compra.'</td>';
+          echo '<td>'.$itemvenda->vendas_codigo.'</td>';
           echo '<td>';
   
-           echo '<a href="itemvendas/editar/'.$itemvendas->id.'"class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
+           echo '<a href="itemvendas/editar/'.$itemvenda->id.'"class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
 
-           echo ' <a href="itemvendas/apagar/'.$itemvendas->id.'" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
+           echo ' <a href="itemvendas/apagar/'.$itemvenda->id.'" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
           echo '</td>';
           echo '</tr>';
         }

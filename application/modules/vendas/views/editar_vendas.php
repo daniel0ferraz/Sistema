@@ -51,11 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <input type="text" name="codigo" value="<?php echo $vendas->codigo?>" class="form-control">
         </div>
 
-      <div class="form-group">
-          <label>Codigo Cliente</label>
-          <input type="text" name="codigoCliente" value="<?php echo $vendas->codigoCliente?>" class="form-control">
-        </div>
-
          <div class="form-group">
           <label>Data Venda</label>
           <input type="text" name="dataVenda" value="<?php echo $vendas->dataVenda?>" class="form-control">

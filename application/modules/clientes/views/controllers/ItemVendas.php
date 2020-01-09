@@ -2,43 +2,43 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class ItemVendas extends CI_Controller {	
 	
-	//Página de listar Itemvendas
+	//Página de listar produtos
 	public function index()
 	{					
-		//Carrega o Model Itemvendas
+		//Carrega o Model listarprodutos
 		$this->load->model('itemvendas_model', 'itemvendas');			
-		//Criamos um Array dados para armazenas os Itemvendas
-		//Executamos a função no Itemvendas_model getItemvendas
+		//Criamos um Array dados para armazenas os produtos
+		//Executamos a função no produtos_model getProdutos
 		$data['itemvendas'] = $this->itemvendas->getItemVenda();
-		//Carregamos a view listarItemvendas e passamos como parametro a array Itemvendas que guarda todos os Itemvendas da db Itemvendas
+		//Carregamos a view listarprodutos e passamos como parametro a array listarprodutos que guarda todos os produtos da db produtos
 		$this->load->view('listar_itvendas', $data);
 	}
-	//Página de adicionar Itemvendas
+	//Página de adicionar listarprodutos
 	public function add()
 	{	
-		//Carrega o Model Itemvendas			
+		//Carrega o Model listarprodutos			
 		$this->load->model('itemvendas_model', 'itemvendas');					
 		//Carrega a View
 		$this->load->view('add_itvendas');
 	}
 	
-//Página de editar Itemvendas
+//Página de editar listarprodutos
 public function editar($id=NULL)	
 {						
-	//Verifica se foi passado um ID, se não vai para a página listar Itemvendas
+	//Verifica se foi passado um ID, se não vai para a página listar produtos
 	if($id == NULL) {
-		redirect('/');
+		redirect('/itemvendas');
 	}
 
-	//Carrega o Model Itemvendas				
+	//Carrega o Model listarprodutos			
 	$this->load->model('itemvendas_model', 'itemvendas');
 
 	//Faz a consulta no banco de dados pra verificar se existe
 	$query = $this->itemvendas->getItemVendaByID($id);
 
-	//Verifica que a consulta voltar um registro, se não vai para a página listar Itemvendas
+	//Verifica que a consulta voltar um registro, se não vai para a página listar produtos
 	if($query == NULL) {
-		redirect('/');
+		redirect('/itemvendas');
 	}
 	
 	//Criamos uma array onde vai guardar os dados do produto e passamos como parametro para view;	
@@ -63,7 +63,6 @@ public function editar($id=NULL)
 
 			//Pega dados do post e guarda na array $dados
 		$dados['codigo'] = $this->input->post('codigo');
-		$dados['codigoProduto'] = $this->input->post('codigoProduto');
 		$dados['quantidade'] = $this->input->post('quantidade');
 		$dados['val_venda'] = $this->input->post('val_venda');
 		$dados['val_compra'] = $this->input->post('val_compra');
@@ -93,7 +92,7 @@ public function editar($id=NULL)
 		}
 
 		//Carrega o Model Clientes				
-		$this->load->model('Itemvendas_model', 'itemvendas');
+		$this->load->model('ItemVendas_model', 'itemvendas');
 
 		//Faz a consulta no banco de dados pra verificar se existe
 		$query = $this->itemvendas->getItemvendaByID($id);
@@ -106,7 +105,7 @@ public function editar($id=NULL)
 			redirect('/itemvendas');
 
 		} else {
-			//Se não encontrou nenhum registro no banco de dados com a ID passada ele volta para página listar Itemvendas
+			//Se não encontrou nenhum registro no banco de dados com a ID passada ele volta para página listar produtos
 			redirect('/itemvendas');
 		}	
 	}

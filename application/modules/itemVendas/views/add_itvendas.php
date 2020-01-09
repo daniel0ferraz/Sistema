@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="form-group">
           <label>codigo do produto</label>
-          <input type="text" name="codigodoproduto" value="" class="form-control">
+          <input type="text" name="codigoProduto" value="" class="form-control">
         </div>
   
         <div class="form-group">

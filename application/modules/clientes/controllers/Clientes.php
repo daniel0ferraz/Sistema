@@ -42,7 +42,7 @@ public function editar($id=NULL)
 		redirect('/clientes');
 	}
 	
-	//Criamos uma array onde vai guardar os dados do produto e passamos como parametro para view;	
+	//Criamos uma array onde vai guardar os dados do  cliente e passamos como parametro para view;	
 	$dados['clientes'] = $query;
 
 	//Carrega a View
@@ -59,7 +59,7 @@ public function editar($id=NULL)
 	 	echo '<a href="http://localhost/Atividade/index.php/clientes/add" title="voltar">Voltar</a>';
 	 } else {
 
-			//Carrega o Model Cleintes			
+			//Carrega o Model Clientes			
 			$this->load->model('clientes_model', 'clientes');
 
 			//Pega dados do post e guarda na array $dados
@@ -92,7 +92,7 @@ public function editar($id=NULL)
 			redirect('/clientes');
 		}
 
-		//Carrega o Model Clientes				
+		//Carrega o Model_Clientes				
 		$this->load->model('clientes_model', 'clientes');
 
 		//Faz a consulta no banco de dados pra verificar se existe

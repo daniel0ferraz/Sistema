@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           echo '<td>';
   
            echo '<a href="clientes/editar/'.$cliente->id.'" title="Editar cliente" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>';
-           echo ' <a href="cliente/apagar/'.$cliente->id.'" title="Apagar cadastro" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
+           echo ' <a href="clientes/apagar/'.$cliente->id.'" title="Apagar cadastro" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>';
           echo '</td>';
           echo '</tr>';
         }

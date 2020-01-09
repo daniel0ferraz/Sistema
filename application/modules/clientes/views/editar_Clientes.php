@@ -53,30 +53,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   
       <div class="form-group">
           <label>Nome Produto</label>
-          <input type="text" name="nome" value="<?php echo $cliente->nome?>" class="form-control">
+          <input type="text" name="nome" value="<?php echo $clientes->nome?>" class="form-control">
         </div>
 
         <div class="form-group">
           <label>Cpf</label>
-          <input type="text" name="cpf" value="<?php echo $cliente->cpf?>" class="form-control">
+          <input type="text" name="cpf" value="<?php echo $clientes->cpf?>" class="form-control">
         </div>
   
         <div class="form-group">
           <label>Rg</label>
-          <input type="text" name="rg" value="<?php echo $cliente->rg?>" class="form-control">
+          <input type="text" name="rg" value="<?php echo $clientes->rg?>" class="form-control">
         </div>
 
         <div class="form-group">
           <label>Telefone</label>
-          <input type="text" name="telefone" value="<?php echo $cliente->telefone?>" class="form-control">
+          <input type="text" name="telefone" value="<?php echo $clientes->telefone?>" class="form-control">
         </div>
 
 
       <div class="form-group">
         <label>Email</label>
-        <input type="text" name="Email" value="<?php echo $cliente->Email?>" class="form-control">
+        <input type="text" name="Email" value="<?php echo $clientes->Email?>" class="form-control">
       </div>
-       <input type="hidden" name="id" value="<?php echo $cliente->id ?>">
+       <input type="hidden" name="id" value="<?php echo $clientes->id ?>">
       <button type="submit" class="btn btn-success">Atualizar</button>
 
     </div>
