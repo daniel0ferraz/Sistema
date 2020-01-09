@@ -32,7 +32,7 @@ class Produtos extends CI_Controller {
 	{
 		//Verifica se foi passado o campo nome vazio.
 		if ($this->input->post('nome') == NULL) {
-			echo 'O compo nome do produto é obrigatório.';
+			echo 'O compo nome do produto é obrigatório mamaoo.';
 			echo '<a href="/produtos/add" title="voltar">Voltar</a>';
 		} else {
 
